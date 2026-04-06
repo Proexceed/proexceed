@@ -121,7 +121,150 @@ footer {
 </style>
 </head>
 
-<body>
+<body><style>
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+/* Transparent (default) */
+.navbar.transparent {
+  background: transparent;
+}
+
+/* Solid on scroll */
+.navbar.scrolled {
+  background: #0b2c5f;
+}
+
+/* Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* CTA */
+.cta-btn {
+  background: #25D366;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  color: black;
+  top: 30px;
+  min-width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0b2c5f;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+</style>
+
+<div class="navbar transparent" id="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="ProExceed Logo">
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+
+      <!-- DROPDOWN -->
+      <div class="dropdown">
+        <a href="#divisions">Divisions ▾</a>
+        <div class="dropdown-content">
+          <a href="ecomaterials.html">EcoMaterials</a>
+          <a href="geoenergy.html">GeoEnergy</a>
+          <a href="tech.html">Tech</a>
+          <a href="properties.html">Properties</a>
+          <a href="academy.html">Academy</a>
+          <a href="wellness.html">Wellness</a>
+        </div>
+      </div>
+
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+
+      <a href="https://wa.me/2347018824241" class="cta-btn">Get Started</a>
+    </div>
+
+  </div>
+</div>
 <div style="display:flex; align-items:center; padding:10px 20px; background:#ffffff;">
   <a href="https://proexceed.com">
   <img src="logo.png" alt="ProExceed Logo" style="height:80px; margin-right:15px;">
@@ -385,14 +528,27 @@ footer {
    style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
    Chat on WhatsApp
 </a><script>
+// Toggle mobile menu
 function toggleMenu() {
-  var menu = document.getElementById("mobileMenu");
-  if (menu.style.display === "block") {
+  var menu = document.getElementById("navLinks");
+  if (menu.style.display === "flex") {
     menu.style.display = "none";
   } else {
-    menu.style.display = "block";
+    menu.style.display = "flex";
   }
 }
+
+// Change navbar on scroll
+window.addEventListener("scroll", function() {
+  var navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.remove("transparent");
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+    navbar.classList.add("transparent");
+  }
+});
 </script>
 </body>
 </html>
