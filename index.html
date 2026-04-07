@@ -470,13 +470,8 @@ footer {
 // Toggle mobile menu
 function toggleMenu() {
   var menu = document.getElementById("navLinks");
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "flex";
-  }
+  menu.classList.toggle("active");
 }
-
 // Change navbar on scroll
 window.addEventListener("scroll", function() {
   var navbar = document.getElementById("navbar");
