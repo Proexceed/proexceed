@@ -198,14 +198,26 @@ footer {
   display: block;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
 
 @media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     background: #0b2c5f;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 0;
     width: 100%;
     padding: 20px;
@@ -214,12 +226,6 @@ footer {
   .nav-links.active {
     display: flex;
   }
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-}
 }
 
 </style>
