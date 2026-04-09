@@ -198,29 +198,27 @@ footer {
 }
 @media (max-width: 768px) {
 
-.menu-toggle {
-  display: block !important;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  background: red;   /* 👈 TEMP DEBUG */
-  z-index: 3000;
-}
+  .menu-toggle {
+    display: block !important;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 3000;
+  }
 
   .nav-links {
-    display: none;   /* ✅ VERY IMPORTANT */
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
     flex-direction: column;
     background: #0b2c5f;
     position: absolute;
     top: 80px;
     left: 0;
     width: 100%;
-
     padding: 20px;
-  }
-
-  .nav-links.active {
-    display: flex;   /* ✅ shows when clicked */
   }
 
 }
