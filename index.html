@@ -212,23 +212,31 @@ footer {
 @media (max-width: 768px) {
 
   .menu-toggle {
-    display: block;
+    display: block !important;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
   }
 
   .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     background: #0b2c5f;
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
-    padding: 20px;
-    z-index: 999;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+
+    padding: 0 20px;
   }
 
   .nav-links.active {
-    display: flex;
+    max-height: 500px;
+    padding: 20px;
   }
 
 }
