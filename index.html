@@ -220,8 +220,38 @@ transparent {
   .nav-links.active {
     display: flex;
   }
+/* ===== NUCLEAR NAVBAR FIX ===== */
 
+/* FORCE HAMBURGER ALWAYS VISIBLE */
+.menu-toggle {
+  display: block !important;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: yellow !important;
+  z-index: 99999;
 }
+
+/* HIDE NAV LINKS ON MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #0b2c5f;
+    padding: 20px;
+    z-index: 99998;
+  }
+}
+
 </style>
 </head>
 <body>
