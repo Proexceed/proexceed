@@ -200,7 +200,7 @@ footer {
   }
 
   .nav-links {
-  display: none;
+    display: none;  /* ✅ FIXED */
     flex-direction: column;
     background: #0b2c5f;
     position: absolute;
@@ -216,12 +216,12 @@ footer {
   }
 
   .nav-links.active {
+    display: flex;   /* ✅ SHOW ONLY WHEN CLICKED */
     max-height: 500px;
     padding: 20px;
   }
 
 }
-
 </style>
 </head>
 <body>
