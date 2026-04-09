@@ -133,10 +133,6 @@ footer {
   width: 100%;
   position: relative;
 }
-.logo img {
-  height: 75px;
-  object-fit: contain;
-}
 
 .nav-links {
   display: flex;
@@ -182,12 +178,23 @@ footer {
   display: block;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 75px;
+  object-fit: contain;
+}
+
 .menu-toggle {
   display: none;
   font-size: 30px;
   color: white;
   cursor: pointer;
-  z-index: 2000;  /* ✅ added here */
+  z-index: 2000;
+  margin-left: auto;
 }
 @media (max-width: 768px) {
 
