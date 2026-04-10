@@ -52,35 +52,35 @@
     }
 
     /* HAMBURGER */
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
-      color: white;
-      cursor: pointer;
-    }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #0A1F44;
-        width: 200px;
-        padding: 20px;
-      }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
 
-      .nav-links.active {
-        display: flex;
-      }
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
-      .menu-toggle {
-        display: block;
-      }
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0A1F44;
+    width: 200px;
+    padding: 20px;
+  }
 
+  .nav-links.active {
+    display: flex;
+  }
+}
     /* HEADER */
 header {
   background: #0A1F44;
