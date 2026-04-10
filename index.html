@@ -436,10 +436,15 @@ window.addEventListener("scroll", function() {
 </script>
   
  <script>
-  function toggleMenu() {
-    var menu = document.getElementById("navLinks");
-    menu.classList.toggle("active");
-  }
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* SCROLL EFFECT */
+window.addEventListener("scroll", function() {
+  var navbar = document.getElementById("navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
 </script>
 </body>
 </html>
