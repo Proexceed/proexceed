@@ -385,15 +385,19 @@ header {
    Chat on WhatsApp
 </a>
   
- <script>
+<script>
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  const nav = document.getElementById("navLinks");
+  if (nav) {
+    nav.classList.toggle("active");
+  }
 }
 
-/* SCROLL EFFECT */
 window.addEventListener("scroll", function() {
-  var navbar = document.getElementById("navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 50);
+  const navbar = document.getElementById("navbar");
+  if (navbar) {
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  }
 });
 </script>
 </body>
