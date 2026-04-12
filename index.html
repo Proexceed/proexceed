@@ -83,12 +83,14 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 90px;
-    right: 0;
+    position: fixed;
+    top: 80px;
+    right: 10px;
     background: #0A1F44;
     width: 220px;
     padding: 20px;
+    border-radius: 10px;
+    z-index: 2000;
   }
 
   .nav-links.active {
