@@ -429,21 +429,10 @@ body {
    style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
    Chat on WhatsApp
 </a>
-  
-<script>
+ <script>
 function toggleMenu() {
-  const nav = document.getElementById("navLinks");
-  if (nav) {
-    nav.classList.toggle("active");
-  }
+  document.getElementById("navLinks").classList.toggle("active");
 }
-
-window.addEventListener("scroll", function() {
-  const navbar = document.getElementById("navbar");
-  if (navbar) {
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
-  }
-});
 </script>
 </body>
 </html>
