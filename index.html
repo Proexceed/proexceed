@@ -5,15 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProExceed Transnational Limited</title>
 
-<meta name="description" content="ProExceed offers Academy, Tech, Wellness, Energy, Recycling and Real Estate solutions.">
-
 <style>
-html {
-    scroll-behavior: smooth;
-}
-
 body{
-    font-family: Segoe UI, sans-serif;
+    font-family:Segoe UI, sans-serif;
     margin:0;
     background:#f4f6fb;
     color:#333;
@@ -21,55 +15,21 @@ body{
 
 /* NAVBAR */
 .navbar{
-    position:sticky;
-    top:0;
     background:#0a2a66;
-    padding:20px 20px;
+    padding:10px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.logo img{
-    height:100px;
-}
+.logo img{height:40px;}
 
-.nav-links{
-    display:flex;
-    gap:15px;
-}
+.menu-toggle{display:none;color:white;font-size:25px;}
 
 .nav-links a{
     color:white;
+    margin-left:15px;
     text-decoration:none;
-}
-
-.cta{
-    background:#1c4ed8;
-    padding:6px 12px;
-    border-radius:5px;
-}
-
-/* MOBILE */
-.menu-toggle{
-    display:none;
-    color:white;
-    font-size:25px;
-}
-
-@media(max-width:768px){
-.nav-links{
-display:none;
-flex-direction:column;
-position:absolute;
-top:60px;
-right:0;
-background:#0a2a66;
-width:200px;
-padding:15px;
-}
-.nav-links.active{display:flex;}
-.menu-toggle{display:block;}
 }
 
 /* HEADER */
@@ -80,36 +40,26 @@ padding:15px;
     padding:70px 20px;
 }
 
-.header-links a{
+.header a{
     color:white;
-    margin:0 8px;
+    margin:0 6px;
     text-decoration:underline;
     cursor:pointer;
 }
 
-/* CONTAINER */
+/* CONTENT */
 .container{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
     padding:30px 20px;
 }
 
 .section{
-    margin-bottom:50px;
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
+    display:none;
     background:white;
     padding:20px;
+    margin-top:20px;
     border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.05);
 }
 
 /* FOOTER */
@@ -117,12 +67,13 @@ padding:15px;
     background:#0a2a66;
     color:white;
     text-align:center;
-    padding:25px;
+    padding:20px;
 }
 
 .footer a{
     color:#ccc;
     margin:0 8px;
+    cursor:pointer;
     text-decoration:none;
 }
 </style>
@@ -135,106 +86,59 @@ padding:15px;
     <div class="logo">
         <img src="logo.png" alt="ProExceed Logo">
     </div>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact" class="cta">Get Started</a>
-    </div>
 </div>
 
 <!-- HEADER -->
-<div id="home" class="header">
+<div class="header">
     <h1>ProExceed</h1>
     <p>
-        <span class="header-links">
-            <a href="#academy">Academy</a> |
-            <a href="#tech">Tech</a> |
-            <a href="#wellness">Wellness</a> |
-            <a href="#energy">Energy</a> |
-            <a href="#estate">Real Estate</a>
-        </span>
+        <a onclick="showSection('academy')">Academy</a> |
+        <a onclick="showSection('tech')">Tech</a> |
+        <a onclick="showSection('wellness')">Wellness</a> |
+        <a onclick="showSection('energy')">Energy</a> |
+        <a onclick="showSection('estate')">Real Estate</a>
     </p>
 </div>
 
 <div class="container">
 
-<!-- ABOUT -->
-<div id="about" class="section">
-    <h2>About Us</h2>
-    <p>ProExceed empowers individuals and businesses through education, technology, wellness, and sustainable solutions.</p>
+<!-- SERVICES CONTENT (HIDDEN UNTIL CLICKED) -->
+
+<div id="academy" class="section">
+<h2>Academy</h2>
+<p>Courses, tutorials, and educational programs for students and professionals.</p>
 </div>
 
-<!-- SERVICES -->
-<div id="services" class="section">
-    <h2>Our Services</h2>
-
-    <div class="grid">
-
-        <div id="academy" class="card">
-            <h3>Academy</h3>
-            <p>Courses, training and educational resources.</p>
-        </div>
-
-        <div id="tech" class="card">
-            <h3>Tech & Digital</h3>
-            <p>Web development and digital solutions.</p>
-        </div>
-
-        <div id="wellness" class="card">
-            <h3>Wellness & Fitness</h3>
-            <p>Health, fitness and lifestyle programs.</p>
-        </div>
-
-        <div id="energy" class="card">
-            <h3>GeoEnergy</h3>
-            <p>Borehole drilling and energy solutions.</p>
-        </div>
-
-        <div id="estate" class="card">
-            <h3>Real Estate</h3>
-            <p>Property and investment solutions.</p>
-        </div>
-
-    </div>
+<div id="tech" class="section">
+<h2>Tech & Digital Services</h2>
+<p>Website development, digital marketing, and automation solutions.</p>
 </div>
 
-<!-- CONTACT -->
-<div id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Email: info@proexceed.com</p>
-    <a href="https://wa.me/234XXXXXXXXXX">Chat on WhatsApp</a>
+<div id="wellness" class="section">
+<h2>Wellness & Fitness</h2>
+<p>Health programs, fitness coaching, and lifestyle improvement.</p>
 </div>
 
+<div id="energy" class="section">
+<h2>GeoEnergy & Borehole</h2>
+<p>Water drilling and energy solutions for homes and businesses.</p>
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-    <p>© 2026 ProExceed Transnational Limited</p>
-
-    <p>
-        <a href="#policy">Privacy Policy</a>
-        <a href="#terms">Terms of Service</a>
-        <a href="#disclaimer">Disclaimer</a>
-        <a href="#affiliate">Affiliate Disclosure</a>
-        <a href="#cookies">Cookie Policy</a>
-    </p>
+<div id="estate" class="section">
+<h2>Real Estate</h2>
+<p>Property development and investment opportunities.</p>
 </div>
 
-<!-- LEGAL CONTENT -->
-<div class="container">
+<!-- LEGAL CONTENT (HIDDEN) -->
 
 <div id="policy" class="section">
 <h2>Privacy Policy</h2>
-<p>Your privacy is important to us. We protect your data.</p>
+<p>Your data is protected and handled responsibly.</p>
 </div>
 
 <div id="terms" class="section">
 <h2>Terms of Service</h2>
-<p>Use our services responsibly.</p>
+<p>Use our services responsibly and ethically.</p>
 </div>
 
 <div id="disclaimer" class="section">
@@ -254,9 +158,31 @@ padding:15px;
 
 </div>
 
+<!-- FOOTER -->
+<div class="footer">
+<p>© 2026 ProExceed Transnational Limited</p>
+
+<p>
+<a onclick="showSection('policy')">Privacy Policy</a>
+<a onclick="showSection('terms')">Terms of Service</a>
+<a onclick="showSection('disclaimer')">Disclaimer</a>
+<a onclick="showSection('affiliate')">Affiliate Disclosure</a>
+<a onclick="showSection('cookies')">Cookie Policy</a>
+</p>
+</div>
+
+<!-- SCRIPT -->
 <script>
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("active");
+function showSection(id){
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.style.display = 'none');
+
+    document.getElementById(id).style.display = 'block';
+
+    window.scrollTo({
+        top: document.getElementById(id).offsetTop - 50,
+        behavior: 'smooth'
+    });
 }
 </script>
 
