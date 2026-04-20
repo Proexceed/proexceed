@@ -384,28 +384,29 @@ border-radius:50%;
 
 <script>
 const menuBtn = document.getElementById("menuToggle");
+const menuIcon = document.getElementById("menuIcon");
 const nav = document.getElementById("navLinks");
 
 menuBtn.addEventListener("click", function(e){
   e.stopPropagation();
 
+  nav.classList.toggle("active");
+
   if(nav.classList.contains("active")){
-    nav.classList.remove("active");
-    menuBtn.innerHTML = "☰";
+    menuIcon.textContent = "✕";
   } else {
-    nav.classList.add("active");
-    menuBtn.innerHTML = "✕";
+    menuIcon.textContent = "☰";
   }
 });
 
-// CLICK OUTSIDE CLOSE
+// CLOSE WHEN CLICK OUTSIDE
 document.addEventListener("click", function(e){
   if(nav.classList.contains("active") &&
      !nav.contains(e.target) &&
      !menuBtn.contains(e.target)){
 
     nav.classList.remove("active");
-    menuBtn.innerHTML = "☰";
+    menuIcon.textContent = "☰";
   }
 });
 </script>
