@@ -382,17 +382,15 @@ border-radius:50%;
 const menuBtn = document.getElementById("menuToggle");
 const nav = document.getElementById("navLinks");
 
-// CLICK HAMBURGER
 menuBtn.addEventListener("click", function(e){
   e.stopPropagation();
 
-  nav.classList.toggle("active");
-
-  // FORCE icon change
   if(nav.classList.contains("active")){
-    menuBtn.innerHTML = "✕";
-  } else {
+    nav.classList.remove("active");
     menuBtn.innerHTML = "☰";
+  } else {
+    nav.classList.add("active");
+    menuBtn.innerHTML = "✕";
   }
 });
 
