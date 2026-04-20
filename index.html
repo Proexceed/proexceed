@@ -380,17 +380,15 @@ border-radius:50%;
 
 <script>
 // TOGGLE MENU
-function toggleMenu(){
+function toggleMenu(e){
+  e.stopPropagation(); // 🔥 prevents instant close
+
   let nav = document.getElementById("navLinks");
   let icon = document.getElementById("menuToggle");
 
   nav.classList.toggle("active");
 
-  if(nav.classList.contains("active")){
-    icon.textContent = "✕";
-  } else {
-    icon.textContent = "☰";
-  }
+  icon.textContent = nav.classList.contains("active") ? "✕" : "☰";
 }
 
 // CLOSE WHEN CLICK OUTSIDE
@@ -398,7 +396,10 @@ document.addEventListener("click", function(e){
   const nav = document.getElementById("navLinks");
   const icon = document.getElementById("menuToggle");
 
-  if(!nav.contains(e.target) && !icon.contains(e.target)){
+  if(nav.classList.contains("active") &&
+     !nav.contains(e.target) &&
+     !icon.contains(e.target)){
+       
     nav.classList.remove("active");
     icon.textContent = "☰";
   }
