@@ -1,29 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Academy - ProExceed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ProExceed Academy</title>
+
 <style>
-body{background:#0b1120;color:white;font-family:Segoe UI;padding:60px;}
-h1{color:#d4af37;}
+body{
+margin:0;
+font-family:Segoe UI;
+background:#081a3a;
+color:white;
+}
+
+/* NAV */
+.navbar{
+background:#061530;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo img{height:50px;}
+
+.navbar a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1513258496099-48168024aec0') center/cover;
+}
+
+.hero h1{font-size:36px;}
+.hero p{max-width:600px;margin:auto;}
+
+/* SECTION */
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* VIDEO */
+video{
+width:100%;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:#0f2a5a;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:15px;
+background:#2563eb;
+padding:12px 20px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:30px;
+background:#061530;
+}
 </style>
 </head>
 
 <body>
 
-<h1>ProExceed Academy</h1>
+<!-- NAV -->
+<div class="navbar">
+<div class="logo">
+<img src="logo.png">
+</div>
 
-<p>
-We provide educational programs, digital courses, and learning resources for academic and professional growth.
-</p>
+<div>
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
 
-<h2>What You Learn</h2>
-<ul>
-<li>Mathematics & Science</li>
-<li>Digital skills</li>
-<li>Business education</li>
-</ul>
+<!-- HERO -->
+<div class="hero">
+<h1>Build Skills That Create Real Opportunities</h1>
+<p>Gain practical knowledge in academics, digital skills, and business to achieve real-world success.</p>
+<a href="#pricing" class="btn">Enroll Now</a>
+</div>
 
-<a href="contact.html">Enroll Now →</a>
+<!-- VIDEO -->
+<div class="container">
+<h2 style="text-align:center;">See How Our Training Works</h2>
+
+<video controls>
+<source src="academy-video.mp4" type="video/mp4">
+</video>
+</div>
+
+<!-- BENEFITS -->
+<div class="container">
+<h2 style="text-align:center;">What You Will Learn</h2>
+
+<div class="grid">
+<div class="card">Mathematics & Science Mastery</div>
+<div class="card">Digital Skills & Online Income</div>
+<div class="card">Business & Financial Education</div>
+</div>
+</div>
+
+<!-- PRICING -->
+<div id="pricing" class="container">
+<h2 style="text-align:center;">Choose Your Plan</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Basic Plan</h3>
+<p>Access to essential training materials</p>
+<h2>$49</h2>
+
+<a href="https://paystack.com/pay/YOUR-LINK" class="btn">Pay with Paystack</a>
+
+<form action="https://www.paypal.com/ncp/payment/YOUR_ID" method="post" target="_blank">
+<button type="submit" class="btn">Pay with PayPal</button>
+</form>
+
+<a href="mailto:info@proexceed.com" class="btn">Pay via Payoneer</a>
+
+</div>
+
+<div class="card">
+<h3>Premium Plan</h3>
+<p>Full access + mentorship support</p>
+<h2>$99</h2>
+
+<a href="https://paystack.com/pay/YOUR-LINK" class="btn">Pay with Paystack</a>
+
+<form action="https://www.paypal.com/ncp/payment/YOUR_ID" method="post" target="_blank">
+<button type="submit" class="btn">Pay with PayPal</button>
+</form>
+
+<a href="mailto:info@proexceed.com" class="btn">Pay via Payoneer</a>
+
+</div>
+
+</div>
+</div>
+
+<!-- CTA -->
+<div class="container" style="text-align:center;">
+<h2>Ready to Start Learning?</h2>
+<a href="contact.html" class="btn">Get Started Now</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>© 2026 ProExceed Transnational Limited</p>
+</div>
 
 </body>
 </html>
