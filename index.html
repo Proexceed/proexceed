@@ -404,7 +404,27 @@ p{
     <a href="https://wa.me/2347018824241" class="btn">Chat With Us</a>
   </div>
 </div>
+/* ================= LOGO GRID ================= */
+.logo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:30px;
+  align-items:center;
+  text-align:center;
+}
 
+.logo-grid img{
+  max-width:100px;
+  filter:grayscale(100%);
+  opacity:0.7;
+  transition:0.3s;
+}
+
+.logo-grid img:hover{
+  filter:none;
+  opacity:1;
+  transform:scale(1.1);
+}
 <!-- FOOTER -->
 <div class="footer">
 
