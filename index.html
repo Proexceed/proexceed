@@ -10,125 +10,12 @@
 
 <style>
 
-/* ================= BRAND COLORS ================= */
-:root{
-  --primary:#081a3a;
-  --secondary:#061530;
-  --card:#0f2a5a;
-  --accent:#d4af37;
-  --text:#ffffff;
-  --muted:#cbd5e1;
-}
-
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  font-family:Segoe UI, sans-serif;
-  background:var(--primary);
-  color:var(--text);
-}
-
-html{scroll-behavior:smooth;}
-
-/* NAVBAR */
-.navbar{
-  position:fixed;
-  width:100%;
-  background:var(--secondary);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
-  z-index:1000;
-}
-
-.logo img{height:60px;}
-
-.nav-links{display:flex;gap:15px;}
-.nav-links a{color:white;text-decoration:none;font-size:14px;}
-
-.menu-toggle{display:none;font-size:26px;cursor:pointer;color:white;}
-
-.dropdown{position:relative;}
-.dropdown-content{
-  display:none;
-  position:absolute;
-  top:30px;
-  background:var(--secondary);
-  padding:10px;
-  border-radius:6px;
-}
-
-.dropdown:hover .dropdown-content{display:block;}
-
-/* MOBILE */
-@media(max-width:768px){
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:70px;
-    right:0;
-    background:var(--secondary);
-    width:220px;
-    padding:20px;
-  }
-  .nav-links.active{display:flex;}
-  .menu-toggle{display:block;}
-}
-
-/* HERO */
-.hero{
-  height:100vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-  url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-}
-
-.hero h1{font-size:42px;}
-.hero p{color:var(--muted);}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  background:var(--accent);
-  color:#081a3a;
-  padding:12px 20px;
-  border-radius:6px;
-  text-decoration:none;
-}
-
-/* CONTAINER */
-.container{max-width:1100px;margin:auto;padding:70px 20px;}
-
-.section-title{text-align:center;color:var(--accent);margin-bottom:30px;}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* CARD */
-.card{
-  background:var(--card);
-  padding:25px;
-  border-radius:10px;
-  border:1px solid rgba(212,175,55,0.4);
-  transition:0.3s;
-}
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 0 20px rgba(212,175,55,0.3);
-}
-
-/* LOGOS */
+/* ================= LOGO GRID ================= */
 .logo-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
   gap:30px;
+  align-items:center;
   text-align:center;
 }
 
@@ -142,128 +29,234 @@ html{scroll-behavior:smooth;}
 .logo-grid img:hover{
   filter:none;
   opacity:1;
+  transform:scale(1.1);
 }
-
-/* TESTIMONIAL */
-.testimonial{
-  background:var(--card);
-  padding:20px;
-  border-radius:10px;
-  text-align:center;
-}
-
-/* CONTACT */
-.contact-box{
-  background:var(--card);
-  padding:30px;
-  border-radius:10px;
-}
-
-input,textarea{
-  width:100%;
-  padding:10px;
-  margin:10px 0;
-  border:none;
-  border-radius:5px;
-}
-
-button{
-  background:#2563eb;
-  color:white;
-  padding:12px;
-  border:none;
-  width:100%;
-}
-
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:30px;
-  background:var(--secondary);
-}
-
-.footer a{color:white;margin:0 8px;}
 
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>We Help Businesses Scale Faster</h1>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
+<!-- NAVBAR -->
+<div class="navbar">
+
+<div class="logo">Logo</div>
+
+<div class="menu-toggle">☰</div>
+
+<div class="nav-links">
+
+<a href="#about">About</a>
+
+<div class="dropdown">
+<a href="#">Services ▼</a>
+
+<div class="dropdown-content">
+<a href="tech.html">Tech</a>
+<a href="academy.html">Academy</a>
+<a href="wellness.html">Wellness</a>
+<a href="geoenergy.html">GeoEnergy</a>
+<a href="properties.html">Properties</a>
+<a href="eco.html">EcoMaterials</a>
 </div>
+
+</div>
+
+<a href="#contact">Contact</a>
+
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>We Help Businesses Scale Faster & Increase Profitability</h1>
+
+<p>Energy • Technology • Real Estate • Education • Wellness</p>
+
+<a href="#contact" class="btn">Get Started</a>
+<a href="https://wa.me/2347018824241" class="btn">Chat With Us</a>
+
+</section>
+
+<!-- VIDEO -->
+<section class="container">
+
+<h2>Our Work in Action</h2>
+
+<video controls>
+<source src="your-video.mp4" type="video/mp4">
+</video>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container">
+
+<h2>About Us</h2>
+
+<p>
+We deliver global-standard solutions that help businesses grow, reduce costs, and improve performance.
+</p>
+
+</section>
 
 <!-- SERVICES -->
-<div class="container">
-<h2 class="section-title">Our Services</h2>
+<section class="container">
+
+<h2>Our Services</h2>
+
 <div class="grid">
-<div class="card">Tech</div>
+
+<div class="card">Tech & Digital Services</div>
 <div class="card">Academy</div>
-<div class="card">Wellness</div>
-</div>
+<div class="card">Wellness & Fitness</div>
+<div class="card">GeoEnergy & Borehole</div>
+<div class="card">Properties & Estate</div>
+<div class="card">EcoMaterials & Recycling</div>
+
 </div>
 
-<!-- TRUSTED -->
-<div class="container">
-<h2 class="section-title">Trusted Worldwide</h2>
+</section>
+
+<!-- TRUSTED BY -->
+<section class="container">
+
+<h2>Trusted By Businesses Worldwide</h2>
+
 <div class="logo-grid">
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
 </div>
-</div>
+
+</section>
 
 <!-- WHY TRUST -->
-<div class="container">
-<h2 class="section-title">Why Trust Us</h2>
+<section class="container">
+
+<h2>Why Businesses Trust ProExceed</h2>
+
 <div class="grid">
-<div class="card">Global Standards</div>
-<div class="card">Fast Delivery</div>
-</div>
+
+<div class="card">
+<h3>Global Standards</h3>
+<p>We operate with international best practices to deliver world-class solutions.</p>
 </div>
 
-<!-- TESTIMONIAL -->
-<div class="container">
-<h2 class="section-title">Testimonials</h2>
+<div class="card">
+<h3>Proven Results</h3>
+<p>We focus on increasing revenue and scaling businesses effectively.</p>
+</div>
+
+<div class="card">
+<h3>Fast Execution</h3>
+<p>We deliver quickly without compromising quality.</p>
+</div>
+
+<div class="card">
+<h3>Multi-Industry Expertise</h3>
+<p>We operate across tech, energy, real estate, and education.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="container">
+
+<h2>What Our Clients Say</h2>
+
 <div class="grid">
-<div class="testimonial">Excellent service — USA</div>
-<div class="testimonial">Highly professional — UK</div>
+
+<div class="testimonial">
+<p>"ProExceed helped scale our operations faster than expected."</p>
+<b>— Michael R., USA</b>
 </div>
+
+<div class="testimonial">
+<p>"Professional, fast, and reliable service delivery."</p>
+<b>— Sarah L., UK</b>
 </div>
+
+<div class="testimonial">
+<p>"Outstanding experience. Highly recommended."</p>
+<b>— Daniel K., Canada</b>
+</div>
+
+<div class="testimonial">
+<p>"They delivered exactly what we needed."</p>
+<b>— Ahmed F., UAE</b>
+</div>
+
+<div class="testimonial">
+<p>"Excellent communication and execution."</p>
+<b>— James W., Australia</b>
+</div>
+
+<div class="testimonial">
+<p>"Very reliable team. Will work with them again."</p>
+<b>— Lukas M., Germany</b>
+</div>
+
+<div class="testimonial">
+<p>"Top-tier service with real business results."</p>
+<b>— Priya S., Singapore</b>
+</div>
+
+</div>
+
+</section>
 
 <!-- CONTACT -->
-<div id="contact" class="container">
-<h2 class="section-title">Contact Us</h2>
+<section id="contact" class="container">
 
-<div class="contact-box">
+<h2>Contact Us</h2>
 
-<p style="text-align:center;">FREE Consultation</p>
+<p>Get a <b>FREE Business Growth Consultation</b></p>
 
 <form action="https://formspree.io/f/your-id" method="POST">
 
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
-<textarea name="message"></textarea>
+<input type="text" name="business" placeholder="Business Type">
+<textarea name="message" placeholder="Tell us what you need"></textarea>
 
-<button type="submit">Submit</button>
+<button type="submit">Request Consultation</button>
 
 </form>
 
-<p>Email: info@proexceed.com | support@proexceed.com</p>
+<p><b>Call Us:</b> +1********</p>
+<p><b>Email:</b> info@proexceed.com | support@proexceed.com</p>
 
-</div>
-</div>
+<a href="https://wa.me/2347018824241" class="btn">Chat With Us</a>
+
+</section>
 
 <!-- FOOTER -->
-<div class="footer">
-<p>© 2026 ProExceed</p>
-<a href="#">Privacy</a>
-<a href="#">Terms</a>
-<a href="#">Disclaimer</a>
-</div>
+<footer>
+
+<p>© 2026 ProExceed Transnational Limited</p>
+
+<p>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+<a href="disclaimer.html">Disclaimer</a>
+</p>
+
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/2347018824241">💬</a>
+<a href="tel:+1XXXXXXXX">📞</a>
 
 </body>
 </html>
