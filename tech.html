@@ -1,29 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Tech - ProExceed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Services - ProExceed</title>
+
 <style>
-body{background:#0b1120;color:white;font-family:Segoe UI;padding:60px;}
-h1{color:#d4af37;}
+body{margin:0;font-family:Segoe UI;background:#081a3a;color:white;}
+.nav{background:#061530;padding:15px;display:flex;justify-content:space-between;}
+.nav a{color:white;text-decoration:none;margin:0 10px;}
+.hero{text-align:center;padding:80px 20px;}
+.container{padding:50px;max-width:1000px;margin:auto;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:#0f2a5a;padding:20px;border-radius:10px;text-align:center;}
+.btn{background:#2563eb;padding:10px 15px;color:white;text-decoration:none;display:inline-block;margin-top:10px;}
+video{width:100%;border-radius:10px;}
 </style>
 </head>
 
 <body>
 
-<h1>Tech & Digital Services</h1>
+<div class="nav">
+<div><b>ProExceed</b></div>
+<div><a href="index.html">Home</a></div>
+</div>
 
-<p>
-We build scalable digital systems, websites, and automation tools for modern businesses.
-</p>
+<div class="hero">
+<h1>Power Your Business with Smart Technology</h1>
+<p>We design digital solutions that help you scale faster and operate efficiently.</p>
+</div>
 
-<h2>Services</h2>
-<ul>
-<li>Website development</li>
-<li>Automation systems</li>
-<li>Digital branding</li>
-</ul>
+<div class="container">
+<video controls>
+<source src="tech-video.mp4">
+</video>
+</div>
 
-<a href="contact.html">Build With Us →</a>
+<div class="container">
+<div class="grid">
+<div class="card">Website Development</div>
+<div class="card">Automation Systems</div>
+<div class="card">AI & Data Solutions</div>
+</div>
+</div>
+
+<div class="container">
+<div class="grid">
+
+<div class="card">
+<h3>Starter</h3>
+<h2>$99</h2>
+<a href="https://paystack.com/pay/YOUR-LINK" class="btn">Paystack</a>
+<form action="https://www.paypal.com/ncp/payment/YOUR_ID" method="post"><button class="btn">PayPal</button></form>
+</div>
+
+<div class="card">
+<h3>Pro</h3>
+<h2>$299</h2>
+<a href="https://paystack.com/pay/YOUR-LINK" class="btn">Paystack</a>
+<form action="https://www.paypal.com/ncp/payment/YOUR_ID" method="post"><button class="btn">PayPal</button></form>
+</div>
+
+</div>
+</div>
 
 </body>
 </html>
