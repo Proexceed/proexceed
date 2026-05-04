@@ -1,26 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>EcoMaterials - ProExceed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoMaterials | ProExceed</title>
+
 <style>
-body{background:#081a3a;color:white;font-family:Segoe UI;}
-.container{padding:50px;text-align:center;}
+:root{
+--primary:#0a1f44;
+--secondary:#061530;
+--card:#0f2a5a;
+--accent:#d4af37;
+--text:#ffffff;
+}
+
+body{font-family:Segoe UI;background:var(--primary);color:white;margin:0;}
+
+.container{max-width:1100px;margin:auto;padding:70px 20px;}
+
+h2{color:var(--accent);text-align:center;}
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:10px;
+margin:10px 0;
+border:1px solid rgba(212,175,55,0.3);
+}
+
+.btn{
+background:linear-gradient(135deg,#d4af37,#f5d76e);
+padding:12px 20px;
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
+color:#061530;
+font-weight:bold;
+border-radius:6px;
+}
+
+.footer{background:var(--secondary);padding:30px;text-align:center;}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-<h1>Recycling for a Sustainable Future</h1>
-<p>Plastic recycling and eco-friendly materials.</p>
+<h2>EcoMaterials & Recycling</h2>
 
-<video controls width="100%">
-<source src="eco-video.mp4">
-</video>
+<div class="card">
+<h3>Pelletized HDPE</h3>
+<p>$1.5 – $3 per kg</p>
+</div>
 
-<a href="contact.html">Partner With Us</a>
+<div class="card">
+<h3>Pelletized LDPE</h3>
+<p>$1 – $2.2 per kg</p>
+</div>
+
+<div class="card">
+<h3>Pelletized PP</h3>
+<p>$2 – $4 per kg</p>
+</div>
+
+<p style="text-align:center;margin-top:20px;">
+<b>We BUY all kinds of scrap plastic materials.</b><br>
+Contact us today.
+</p>
+
+<h2>Payment Options</h2>
+
+<div class="card">
+<b>Nigeria:</b> Bank Transfer / Card
+</div>
+
+<div class="card">
+<b>International:</b> Paystack / PayPal
+</div>
+
+<a href="https://wa.me/2347018824241" class="btn">Chat With Us</a>
 
 </div>
+
+<div class="footer">© ProExceed</div>
 
 </body>
 </html>
