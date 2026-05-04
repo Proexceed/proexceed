@@ -1,25 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>GeoEnergy - ProExceed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GeoEnergy & Borehole Drilling | ProExceed</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-body{background:#081a3a;color:white;font-family:Segoe UI;}
-.container{padding:50px;text-align:center;}
+
+/* BRAND COLORS */
+:root{
+--primary:#0a1f44;
+--secondary:#061530;
+--card:#0f2a5a;
+--accent:#d4af37;
+--text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Segoe UI, sans-serif;
+background:var(--primary);
+color:var(--text);
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:var(--secondary);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+z-index:1000;
+}
+
+.nav-links a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:var(--accent);
+}
+
+/* HERO */
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1581093588401-22c8b9f43a2d') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+/* BUTTON */
+.btn{
+background:linear-gradient(135deg,#d4af37,#f5d76e);
+color:#061530;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-top:15px;
+}
+
+.btn:hover{
+box-shadow:0 0 20px rgba(212,175,55,0.5);
+}
+
+/* SECTION */
+.container{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2{
+color:var(--accent);
+text-align:center;
+margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:var(--card);
+padding:25px;
+border-radius:10px;
+border:1px solid rgba(212,175,55,0.3);
+}
+
+/* VIDEO */
+video{
+width:100%;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* PAYMENT BOX */
+.payment{
+background:var(--card);
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* FOOTER */
+.footer{
+background:var(--secondary);
+padding:30px;
+text-align:center;
+}
+
+.footer a{
+color:white;
+margin:0 8px;
+text-decoration:none;
+}
+
+.footer a:hover{
+color:var(--accent);
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="navbar">
+<div><b>ProExceed</b></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>GeoEnergy & Borehole Drilling Solutions</h1>
+<p>Professional Water Solutions for Homes & Businesses</p>
+<a href="#contact" class="btn">Request Service</a>
+</div>
+</div>
+
+<!-- SERVICES -->
 <div class="container">
-<h1>Reliable Water & Energy Solutions</h1>
-<p>Borehole drilling and sustainable energy services.</p>
+<h2>Our Services</h2>
 
-<video controls width="100%">
-<source src="energy-video.mp4">
-</video>
+<div class="grid">
 
-<h2>Request a Quote</h2>
-<a href="contact.html">Get Started</a>
+<div class="card">
+<h3>Geophysical Survey</h3>
+<p>$80 – $200 (includes water analysis)</p>
+<p>Price depends on location and terrain.</p>
+</div>
+
+<div class="card">
+<h3>Borehole Drilling</h3>
+<p>$25+ per meter</p>
+<p>Depth varies based on geological conditions.</p>
+</div>
+
+<div class="card">
+<h3>Water Analysis</h3>
+<p>Included in survey</p>
+<p>Ensures safe and clean water supply.</p>
+</div>
+
+</div>
+</div>
+
+<!-- VIDEO SECTION -->
+<div class="container">
+<h2>Borehole Drilling in Nigeria</h2>
+
+<iframe width="100%" height="400"
+src="https://www.youtube.com/embed/6zY8X6Zq3V0"
+title="Borehole Drilling Nigeria"
+frameborder="0"
+allowfullscreen></iframe>
+
+<iframe width="100%" height="400"
+src="https://www.youtube.com/embed/9sXl6s5Y3kA"
+title="Water Drilling Process"
+frameborder="0"
+allowfullscreen></iframe>
+
+</div>
+
+<!-- PAYMENT -->
+<div class="container">
+<h2>Payment Options</h2>
+
+<div class="grid">
+
+<div class="payment">
+<h3>🇳🇬 For Nigeria</h3>
+<p>✔ Bank Transfer</p>
+<p>✔ Debit/Credit Card</p>
+
+<p><b>Account Name:</b> ProExceed Transnational Ltd</p>
+<p><b>Bank:</b> Your Bank Name</p>
+<p><b>Account Number:</b> XXXXXXXX</p>
+
+<a href="#" class="btn">Pay with Card</a>
+</div>
+
+<div class="payment">
+<h3>🌍 International (US & Worldwide)</h3>
+<p>✔ Paystack</p>
+<p>✔ PayPal</p>
+
+<a href="#" class="btn">Pay with Paystack</a>
+<a href="#" class="btn">Pay with PayPal</a>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="container">
+<h2>Contact Us</h2>
+
+<p style="text-align:center;">
+Call: +1******** <br>
+Email: info@proexceed.com | support@proexceed.com
+</p>
+
+<div style="text-align:center;">
+<a href="https://wa.me/2347018824241" class="btn">Chat on WhatsApp</a>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+<p>© 2026 ProExceed Transnational Limited</p>
+
+<p>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms</a>
+<a href="disclaimer.html">Disclaimer</a>
+</p>
 
 </div>
 
