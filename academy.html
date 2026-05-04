@@ -1,37 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Academy | ProExceed</title>
+
 <style>
-body{background:#0a1f44;color:white;font-family:Segoe UI;}
-.container{max-width:1100px;margin:auto;padding:70px;}
-h2{color:#d4af37;text-align:center;}
-.card{background:#0f2a5a;padding:20px;margin:10px;border-radius:10px;}
+:root{
+--primary:#0a1f44;
+--secondary:#061530;
+--card:#102a5c;
+--accent:#d4af37;
+}
+
+body{margin:0;font-family:Segoe UI;background:var(--primary);color:white;}
+
+.navbar{
+background:var(--secondary);
+padding:15px;
+display:flex;
+justify-content:space-between;
+}
+
+.container{max-width:600px;margin:auto;padding:40px 20px;text-align:center;}
+
+h2{color:var(--accent);}
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.btn{
+background:linear-gradient(135deg,#d4af37,#f5d76e);
+padding:14px;
+display:block;
+margin:10px auto;
+width:80%;
+border-radius:10px;
+text-decoration:none;
+color:#061530;
+font-weight:bold;
+}
+
+.footer{background:var(--secondary);padding:30px;text-align:center;}
 </style>
 </head>
 
 <body>
 
+<div class="navbar">
+<div><b>ProExceed</b></div>
+<div>Home | Contact</div>
+</div>
+
 <div class="container">
+
 <h2>ProExceed Academy</h2>
 
 <div class="card">
-Online Courses: $20 – $150
-</div>
-
-<div class="card">
-Ebooks & Study Materials: $5 – $50
-</div>
-
-<div class="card">
-Private Coaching: $50 – $200
+<p>Online Courses: $20 – $150</p>
+<p>Ebooks: $5 – $50</p>
+<p>Coaching: $50 – $200</p>
 </div>
 
 <h2>Payment</h2>
 
-<div class="card">Nigeria: Bank Transfer / Card</div>
-<div class="card">International: Paystack / PayPal</div>
+<div class="card">
+🇳🇬 Nigeria<br>
+✔ Bank Transfer<br>
+✔ Card Payment
+</div>
 
+<div class="card">
+🌍 International (US & Worldwide)<br>
+✔ Paystack<br>
+✔ PayPal
+
+<a href="#" class="btn">Pay with Paystack</a>
+<a href="#" class="btn">Pay with PayPal</a>
+</div>
+
+<h2>Contact Us</h2>
+
+<p>Call: +1********</p>
+<p>Email: info@proexceed.com | support@proexceed.com</p>
+
+<a href="https://wa.me/2347018824241" class="btn">Chat on WhatsApp</a>
+
+</div>
+
+<div class="footer">
+© 2026 ProExceed Transnational Limited
 </div>
 
 </body>
